@@ -18,10 +18,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             EcovexHubTheme {
-
-                }
+                App()
             }
         }
     }
+}
 
 
