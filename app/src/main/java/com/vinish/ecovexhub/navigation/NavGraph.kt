@@ -1,6 +1,7 @@
 package com.vinish.ecovexhub.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -13,7 +14,7 @@ import com.vinish.ecovexhub.ui.home.HomeScreen
 import com.vinish.ecovexhub.ui.profile.ProfileScreen
 
 @Composable
-fun EcovexNavGraph(navController: NavHostController){
+fun EcovexNavGraph(navController: NavHostController, modifier: Modifier = Modifier){
     // variable
 
     NavHost(
