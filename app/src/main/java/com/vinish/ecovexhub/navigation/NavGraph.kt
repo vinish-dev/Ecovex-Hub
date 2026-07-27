@@ -2,12 +2,10 @@ package com.vinish.ecovexhub.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
-import com.vinish.ecovexhub.ui.competitons.CompetitionScreen
+import com.vinish.ecovexhub.ui.updates.UpdatesScreen
 import com.vinish.ecovexhub.ui.events.EventsScreen
 import com.vinish.ecovexhub.ui.explore.ExploreScreen
 import com.vinish.ecovexhub.ui.home.HomeScreen
@@ -26,8 +24,8 @@ fun EcovexNavGraph(navController: NavHostController, modifier: Modifier = Modifi
             HomeScreen()
         }
 
-        composable(Routes.Competitions.route){
-            CompetitionScreen()
+        composable(Routes.Updates.route){
+            UpdatesScreen()
         }
 
         composable(Routes.Events.route){

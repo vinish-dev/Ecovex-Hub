@@ -23,10 +23,10 @@ private val bottomNavItems = listOf(
         unselectedIcon = R.drawable.ic_home
     ),
     BottomNavItem(
-        title = "Compete",
-        route = Routes.Competitions.route,
-        selectedIcon = R.drawable.ic_trophy_filled,
-        unselectedIcon = R.drawable.ic_trophy
+        title = "Updates",
+        route = Routes.Updates.route,
+        selectedIcon = R.drawable.ic_updates_filled,
+        unselectedIcon = R.drawable.ic_updates
     ),
     BottomNavItem(
         title = "Events",
