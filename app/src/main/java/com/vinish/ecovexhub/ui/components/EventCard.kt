@@ -16,27 +16,29 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.Stable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.vinish.ecovexhub.R
-import com.vinish.ecovexhub.model.EventStatus
+import com.vinish.ecovexhub.model.Event
 
-@Preview(showBackground = true, showSystemUi = true, apiLevel = 36)
+
 @Composable
 fun EventCard(
+    event: Event,
+    onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Card(
         modifier = modifier.fillMaxWidth().height(118.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        shape = RoundedCornerShape(16.dp)
+        shape = RoundedCornerShape(16.dp),
+        onClick = onClick
 
     ) {
         Row(
@@ -45,11 +47,11 @@ fun EventCard(
                 .padding(16.dp)
         ) {
             Image(
-                painter = painterResource(R.drawable.event_talks),
+                painter = painterResource(event.category.bannerRes),
                 contentDescription = null,
                 modifier = Modifier
                     .size(80.dp)
-                    .clip(RoundedCornerShape(16.dp))
+                    .clip(RoundedCornerShape(16.dp)).align(Alignment.Top)
             )
             Spacer(Modifier.width(16.dp))
 
@@ -58,7 +60,7 @@ fun EventCard(
                 modifier = Modifier.weight(1f)
             ) {
                 Text(
-                    text = "Smart India Hackathon 2027",
+                    text = event.title,
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.SemiBold,
 
@@ -69,24 +71,25 @@ fun EventCard(
                 Row(
                     modifier = Modifier.fillMaxWidth()
                 ) {
-                    Text("Hackathon", color = Color.Gray)
+                    Text(event.category.displayName, color = Color.Gray, style = MaterialTheme.typography.labelMedium)
                     Spacer(Modifier.weight(1f))
-                    StatusChip(EventStatus.ONGOING)
+                    StatusChip(event.status)
                 }
 
                 Spacer(Modifier.height(8.dp))
 
+                //calendar icon and date
                 Row(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Icon(
-                        painter = painterResource(R.drawable.ic_calendar_clock_20dp),
+                        painter = painterResource(R.drawable.ic_calendar_clock_16dp),
                         contentDescription = null
                     )
                     Spacer(Modifier.width(4.dp))
-                    Text("10 Aug")
+                    Text(text = event.date, fontSize = 12.sp)
                     Text(" • ")
-                    Text("SJEC Campus")
+                    Text(text = event.location, fontSize = 12.sp)
                 }
             }
         }
