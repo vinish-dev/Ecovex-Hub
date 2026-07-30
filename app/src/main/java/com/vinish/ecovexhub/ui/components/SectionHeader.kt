@@ -28,7 +28,7 @@ fun SectionHeader(
         verticalAlignment = Alignment.CenterVertically
         ) {
         Text(
-            text = "Upcoming",
+            text = title,
             fontWeight = FontWeight.Bold,
             style = MaterialTheme.typography.titleMedium
         )
