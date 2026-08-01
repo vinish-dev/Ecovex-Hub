@@ -14,14 +14,16 @@ import com.vinish.ecovexhub.model.Update
 import com.vinish.ecovexhub.ui.components.SectionHeader
 import com.vinish.ecovexhub.ui.components.UpdateCard
 
-@Preview(showSystemUi = true, showBackground = true)
+//@Preview(showSystemUi = true, showBackground = true)
 @Composable
 //todo: remove take 2
 fun LatestUpdateSection(
-    updates: List<Update> = updatesList.take(2),
+    updates: List<Update>,
     modifier: Modifier = Modifier
 ) {
-    Column() {
+    Column(
+        modifier = modifier
+    ) {
         SectionHeader(
             title = "Latest Updates",
             showViewAll = true,

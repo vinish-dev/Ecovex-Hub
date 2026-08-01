@@ -16,18 +16,19 @@ import com.vinish.ecovexhub.model.OverviewStat
 import com.vinish.ecovexhub.ui.components.SectionHeader
 import com.vinish.ecovexhub.ui.components.StatCard
 
-@Preview(showBackground = true, showSystemUi = true)
+//@Preview(showBackground = true, showSystemUi = true)
 
 @Composable
-fun OverviewSection(stats: List<OverviewStat> = statList, modifier: Modifier = Modifier) {
-    Column() {
+fun OverviewSection(stats: List<OverviewStat>, modifier: Modifier = Modifier) {
+    Column(
+        modifier = modifier
+    ) {
         SectionHeader(title = "Overview", showViewAll = false)
 
         LazyRow(
-            modifier = Modifier.fillMaxWidth()
-                .padding(top = 12.dp),
+            modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
-            contentPadding = PaddingValues(16.dp)
+            contentPadding = PaddingValues( vertical = 8.dp, horizontal = 2.dp )
         ) {
             items(stats){ state ->
                 StatCard(stat = state)

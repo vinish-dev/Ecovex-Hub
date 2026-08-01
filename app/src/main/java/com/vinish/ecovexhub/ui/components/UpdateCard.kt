@@ -34,16 +34,9 @@ import com.vinish.ecovexhub.model.UpdateType
 import com.vinish.ecovexhub.theme.OnSuccessContainer
 import com.vinish.ecovexhub.theme.SuccessContainer
 
-@Preview(showSystemUi = true, showBackground = true)
 @Composable
 fun UpdateCard(
-    update: Update = Update(
-        id = "2",
-        title = "Weekly Meeting",
-        description = "Don't forget the sync call today at 4:00 PM in Conference Room B.",
-        time = "15m ago",
-        type = UpdateType.REMINDER
-    ),
+    update: Update,
     modifier: Modifier = Modifier
 ) {
     Card(

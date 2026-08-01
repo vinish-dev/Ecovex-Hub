@@ -22,16 +22,28 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.vinish.ecovexhub.R
 import com.vinish.ecovexhub.model.Event
+import com.vinish.ecovexhub.model.EventCategory
+import com.vinish.ecovexhub.model.EventStatus
 
-
+@Preview(showSystemUi = true, showBackground = true)
 @Composable
 fun EventCard(
-    event: Event,
-    onClick: () -> Unit,
+    event: Event = Event(
+        id = 1,
+        title = "Tree Plantation Drive",
+        description = "Join us in our mission to make the camp greener and healthier. Together we can create a better environment For future generation ",
+        category = EventCategory.DRIVE,
+        status = EventStatus.UPCOMING,
+        date = "05 Sep 2026",
+        location = "Main Campus",
+        imageRes = null
+    ),
+    onClick: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     Card(

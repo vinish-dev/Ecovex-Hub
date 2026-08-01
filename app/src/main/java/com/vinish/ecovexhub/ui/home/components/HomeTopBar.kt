@@ -1,11 +1,14 @@
 package com.vinish.ecovexhub.ui.home.components
 
+import android.R.attr.text
+import android.service.autofill.Validators.and
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -19,6 +22,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.vinish.ecovexhub.R
+import com.vinish.ecovexhub.theme.EcovexGreen
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
@@ -28,13 +32,18 @@ fun HomeTopBar(
 ) {
     Row(
         modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 20.dp, vertical = 16.dp),
+            .fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
 
     ) {
-        //app name text
+//        app icon and name text
+        Icon(
+            painter = painterResource(R.drawable.ic_brand_sapling_new),
+            contentDescription = null,
+            tint = EcovexGreen
+        )
+        Spacer(Modifier.width(4.dp))
         Text(
             text = "Ecovex",
             style = MaterialTheme.typography.headlineSmall,

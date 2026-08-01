@@ -31,12 +31,11 @@ import androidx.compose.ui.unit.dp
 import com.vinish.ecovexhub.R
 import com.vinish.ecovexhub.theme.EcovexGreen
 
-//todo: pass onClick
 
-@Preview(showBackground = true, showSystemUi = true, apiLevel = 35)
+//@Preview(showBackground = true, showSystemUi = true, apiLevel = 35)
 @Composable
 fun TreeExplorerCard(
-//    onScanClick: () -> Unit,
+    onScanClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     //main card
