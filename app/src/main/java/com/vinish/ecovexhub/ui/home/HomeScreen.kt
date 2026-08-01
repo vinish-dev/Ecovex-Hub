@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.OutlinedTextFieldDefaults.contentPadding
 import androidx.compose.material3.Text
@@ -25,18 +26,20 @@ import com.vinish.ecovexhub.ui.home.components.UpcomingEventsSection
 
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
-fun HomeScreen(modifier: Modifier = Modifier) {
+fun HomeScreen( modifier: Modifier = Modifier) {
     LazyColumn(
         modifier = modifier.fillMaxSize(),
         contentPadding = PaddingValues(
-            horizontal = 16.dp,
-            vertical = 16.dp
+            horizontal = 16.dp
         ),
         verticalArrangement = Arrangement.spacedBy(30.dp)
     ){
         item {
             //top bar
-            HomeTopBar()
+            HomeTopBar(
+                onProfileClick = {},
+                onNotificationClick = {}
+            )
 
             //hello section
             GreetingSection(
@@ -61,7 +64,7 @@ fun HomeScreen(modifier: Modifier = Modifier) {
             UpcomingEventsSection(events = EventList.take(2))
 
             //to prevent overlapping with bottom bar
-            Spacer(Modifier.height(64.dp))
+//            Spacer(Modifier.height(64.dp))
         }
 
 

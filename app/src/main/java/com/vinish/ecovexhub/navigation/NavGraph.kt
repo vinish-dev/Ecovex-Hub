@@ -21,7 +21,7 @@ fun EcovexNavGraph(navController: NavHostController, modifier: Modifier = Modifi
     ){
         //calls for each screen
         composable(Routes.Home.route){
-            HomeScreen()
+            HomeScreen(modifier = modifier)
         }
 
         composable(Routes.Updates.route){

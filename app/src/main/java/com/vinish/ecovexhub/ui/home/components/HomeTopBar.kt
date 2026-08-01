@@ -24,14 +24,15 @@ import androidx.compose.ui.unit.dp
 import com.vinish.ecovexhub.R
 import com.vinish.ecovexhub.theme.EcovexGreen
 
-@Preview(showBackground = true, showSystemUi = true)
+//@Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun HomeTopBar(
-//    onNotificationClick: () -> Unit,
-//    onProfileClick: () -> Unit
+    onNotificationClick: () -> Unit,
+    onProfileClick: () -> Unit,
+    modifier: Modifier = Modifier
 ) {
     Row(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
