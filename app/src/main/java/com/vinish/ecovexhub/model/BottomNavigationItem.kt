@@ -1,4 +1,4 @@
-package com.vinish.ecovexhub.ui.components
+package com.vinish.ecovexhub.model
 
 data class BottomNavItem(
     val title: String,

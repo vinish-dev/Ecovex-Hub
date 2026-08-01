@@ -10,6 +10,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.vinish.ecovexhub.R
+import com.vinish.ecovexhub.model.BottomNavItem
 import com.vinish.ecovexhub.navigation.Routes
 
 //bottom nav items
