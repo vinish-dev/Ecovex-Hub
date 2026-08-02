@@ -6,17 +6,15 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.vinish.ecovexhub.data.fake.EventList
 import com.vinish.ecovexhub.model.Event
 import com.vinish.ecovexhub.ui.components.EventCard
 import com.vinish.ecovexhub.ui.components.SectionHeader
 
-@Preview(showBackground = true, showSystemUi = true)
+
 @Composable
 fun UpcomingEventsSection(
-    events: List<Event> = EventList,
+    events: List<Event>,
     onViewAllClick: () -> Unit= {},
     onEventClick: (Event) -> Unit = {},
     modifier: Modifier = Modifier

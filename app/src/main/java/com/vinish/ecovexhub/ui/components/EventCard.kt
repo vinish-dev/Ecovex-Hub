@@ -30,19 +30,10 @@ import com.vinish.ecovexhub.model.Event
 import com.vinish.ecovexhub.model.EventCategory
 import com.vinish.ecovexhub.model.EventStatus
 
-@Preview(showSystemUi = true, showBackground = true)
+
 @Composable
 fun EventCard(
-    event: Event = Event(
-        id = 1,
-        title = "Tree Plantation Drive",
-        description = "Join us in our mission to make the camp greener and healthier. Together we can create a better environment For future generation ",
-        category = EventCategory.DRIVE,
-        status = EventStatus.UPCOMING,
-        date = "05 Sep 2026",
-        location = "Main Campus",
-        imageRes = null
-    ),
+    event: Event,
     onClick: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
