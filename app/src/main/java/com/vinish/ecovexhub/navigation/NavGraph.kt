@@ -29,7 +29,7 @@ fun EcovexNavGraph(navController: NavHostController, modifier: Modifier = Modifi
         }
 
         composable(Routes.Events.route){
-            EventsScreen()
+            EventsScreen(modifier = modifier)
         }
 
         composable(Routes.Explore.route){
