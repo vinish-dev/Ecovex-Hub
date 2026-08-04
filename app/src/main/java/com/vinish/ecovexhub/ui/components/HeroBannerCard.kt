@@ -127,8 +127,8 @@ fun HeroBannerCard(
                 //location icon
                 EventInfoChip(
                     iconRes = R.drawable.ic_location_filled,
-                    title = event.location,
-                    subtitle = "Ecovex Grounds" //todo: fetch from object
+                    title = event.venue,
+                    subtitle = event.location
                 )
             }
 
