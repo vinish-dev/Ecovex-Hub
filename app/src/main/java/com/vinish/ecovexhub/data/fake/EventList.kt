@@ -52,7 +52,7 @@ val eventList = listOf<Event>(
         time = "12:00 PM"
     ),
     Event(
-        id = 1,
+        id = 5,
         title = "Tree Plantation Drive",
         description = "Join us in our mission to make the camp greener and healthier. Together we can create a better environment For future generation ",
         category = EventCategory.DRIVE,
@@ -63,7 +63,7 @@ val eventList = listOf<Event>(
         time = "12:30 PM"
     ),
     Event(
-        id = 2,
+        id = 6,
         title = "Sustainability Workshop",
         description = "Join us in our mission to make the camp greener and healthier. Together we can create a better environment For future generation ",
         category = EventCategory.WORKSHOP,
@@ -74,7 +74,7 @@ val eventList = listOf<Event>(
         time = "4:00 PM"
     ),
     Event(
-        id = 3,
+        id = 7,
         title = "Green Roots Challenge",
         description = "Join us in our mission to make the camp greener and healthier. Together we can create a better environment For future generation ",
         category = EventCategory.CHALLENGE,
@@ -85,7 +85,7 @@ val eventList = listOf<Event>(
         time = "8:00 AM"
     ),
     Event(
-        id = 4,
+        id = 8,
         title = "Poster Making Challenge",
         description = "Join us in our mission to make the camp greener and healthier. Together we can create a better environment For future generation ",
         category = EventCategory.CHALLENGE,

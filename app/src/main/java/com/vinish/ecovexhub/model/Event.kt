@@ -1,5 +1,6 @@
 package com.vinish.ecovexhub.model
 
+// TODO(data): replace default parameters
 data class Event(
     val id: Int,
 
