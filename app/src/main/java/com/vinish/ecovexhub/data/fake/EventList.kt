@@ -1,5 +1,6 @@
 package com.vinish.ecovexhub.data.fake
 
+import com.vinish.ecovexhub.R
 import com.vinish.ecovexhub.model.Event
 import com.vinish.ecovexhub.model.EventCategory
 import com.vinish.ecovexhub.model.EventStatus
@@ -14,7 +15,8 @@ val eventList = listOf<Event>(
         status = EventStatus.UPCOMING,
         date = "05 Sep 2026",
         location = "Main Campus",
-        imageRes = null
+        imageRes = R.drawable.img_saplings_banner,
+        time = "8:00 AM"
     ),
     Event(
         id = 2,
@@ -24,7 +26,8 @@ val eventList = listOf<Event>(
         status = EventStatus.ONGOING,
         date = "20 Sep 2026",
         location = "Seminar Hall",
-        imageRes = null
+        imageRes = R.drawable.img_sustainability_workshop,
+        time = "9:30 AM"
     ),
     Event(
         id = 3,
@@ -34,7 +37,8 @@ val eventList = listOf<Event>(
         status = EventStatus.COMPLETED,
         date = "27 Sep 2026",
         location = "Ecovex Workshop",
-        imageRes = null
+        imageRes = R.drawable.img_plant_challenge,
+        time = "9:00 AM"
     ),
     Event(
         id = 4,
@@ -44,7 +48,8 @@ val eventList = listOf<Event>(
         status = EventStatus.UPCOMING,
         date = "30 Sep 2026",
         location = "Auditorium",
-        imageRes = null
+        imageRes = R.drawable.img_plantposter,
+        time = "12:00 PM"
     ),
     Event(
         id = 1,
@@ -54,7 +59,8 @@ val eventList = listOf<Event>(
         status = EventStatus.UPCOMING,
         date = "05 Sep 2026",
         location = "Main Campus",
-        imageRes = null
+        imageRes = R.drawable.img_saplings_banner,
+        time = "12:30 PM"
     ),
     Event(
         id = 2,
@@ -64,7 +70,8 @@ val eventList = listOf<Event>(
         status = EventStatus.ONGOING,
         date = "20 Sep 2026",
         location = "Seminar Hall",
-        imageRes = null
+        imageRes = R.drawable.img_sustainability_workshop,
+        time = "4:00 PM"
     ),
     Event(
         id = 3,
@@ -74,7 +81,8 @@ val eventList = listOf<Event>(
         status = EventStatus.COMPLETED,
         date = "27 Sep 2026",
         location = "Ecovex Workshop",
-        imageRes = null
+        imageRes = R.drawable.img_plant_challenge,
+        time = "8:00 AM"
     ),
     Event(
         id = 4,
@@ -84,7 +92,8 @@ val eventList = listOf<Event>(
         status = EventStatus.UPCOMING,
         date = "30 Sep 2026",
         location = "Auditorium",
-        imageRes = null
+        imageRes = R.drawable.img_plantposter,
+        time = "8:30 AM"
     )
 
 )

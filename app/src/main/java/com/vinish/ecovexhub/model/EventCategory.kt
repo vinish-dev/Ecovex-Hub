@@ -5,7 +5,7 @@ import com.vinish.ecovexhub.R
 
 enum class EventCategory(
     val displayName: String,
-    val bannerRes: Int
+    val IconRes: Int
 ) {
 
     CHALLENGE("Challenge", R.drawable.event_competition),

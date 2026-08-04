@@ -2,6 +2,7 @@ package com.vinish.ecovexhub.model
 
 data class Event(
     val id: Int,
+    val time: String,
     val title: String,
     val description: String,
     val category: EventCategory,

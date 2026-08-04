@@ -50,7 +50,7 @@ fun EventCard(
                 .padding(16.dp)
         ) {
             Image(
-                painter = painterResource(event.category.bannerRes),
+                painter = painterResource(event.category.IconRes),
                 contentDescription = null,
                 modifier = Modifier
                     .size(80.dp)
