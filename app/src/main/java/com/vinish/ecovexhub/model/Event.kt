@@ -18,7 +18,7 @@ data class Event(
     // Schedule
     val time: String,
     val date: String,
-    val registrationDeadline: String = "",
+    val registrationDeadline: String = "18 September 2026",
 
     // Location
     val venue: String = "Main Campus",

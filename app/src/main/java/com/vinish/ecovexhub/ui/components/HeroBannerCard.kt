@@ -42,7 +42,7 @@ fun HeroBannerCard(
         status = EventStatus.ONGOING,
         date = "20 Sep 2026",
         location = "Seminar Hall",
-        imageRes = R.drawable.img_sustainability_workshop,
+        imageRes = R.drawable.img_plant_challenge,
         time = "9:30 AM"
     ),
     modifier: Modifier = Modifier.padding( 16.dp)
@@ -120,6 +120,7 @@ fun HeroBannerCard(
                     title = event.date,
                     subtitle = event.time,
                     iconRes = R.drawable.ic_events_filled,
+                    whiteText = true,
                 )
 
                 Spacer(Modifier.width(16.dp))
@@ -128,7 +129,8 @@ fun HeroBannerCard(
                 EventInfoChip(
                     iconRes = R.drawable.ic_location_filled,
                     title = event.venue,
-                    subtitle = event.location
+                    subtitle = event.location,
+                    whiteText = true
                 )
             }
 

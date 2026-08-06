@@ -18,10 +18,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.Wallpapers
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.vinish.ecovexhub.R
+
 
 @Preview(showSystemUi = true, showBackground = true,
     backgroundColor = 0xFF807C7C
@@ -31,6 +35,8 @@ fun EventInfoChip(
     title: String = "05 Sep 2026",
     subtitle: String = "8:00 AM",
     iconRes: Int = R.drawable.ic_events_filled,
+    subtitleStyle: TextStyle  = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.W400, fontSize = 12.sp),
+    whiteText: Boolean = false,
     modifier: Modifier = Modifier
 ) {
 
@@ -58,12 +64,13 @@ fun EventInfoChip(
             Text(
                 text = title,
                 style = MaterialTheme.typography.titleSmall,
-                color = Color.White
+                color = if (whiteText) Color.White else Color.Unspecified
             )
             Spacer(Modifier.height(4.dp))
             Text(
                 text = subtitle,
-                color = Color.White
+                color = if (whiteText) Color.White else Color.Unspecified,
+                style = subtitleStyle
             )
         }
     }
