@@ -1,6 +1,8 @@
 package com.vinish.ecovexhub.model
 
+import androidx.annotation.DrawableRes
+
 data class EventHighlight(
-    val icon: Int,
+    @DrawableRes val iconRes: Int,
     val title: String
 )
