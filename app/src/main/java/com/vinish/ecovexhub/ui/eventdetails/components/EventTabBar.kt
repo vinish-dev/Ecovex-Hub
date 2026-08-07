@@ -6,13 +6,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.vinish.ecovexhub.model.EventDetailsTab
 
-private val tabs = listOf(
-    "Overview",
-    "Timeline",
-    "Gallery",
-    "Leaderboard"
-)
+
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
 fun EventTabBar(
@@ -25,11 +21,12 @@ fun EventTabBar(
         selectedTabIndex = selectedTab,
         modifier = modifier
     ) {
-        tabs.forEachIndexed { index, title ->
+        // from tabs enum
+        EventDetailsTab.entries.forEachIndexed { index,tab->
             Tab(
                 selected = selectedTab == index,
                 onClick = { onTabSelected(index) },
-                text = { Text(title) }
+                text = { Text(tab.title) }
             )
         }
     }
