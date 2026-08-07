@@ -28,3 +28,7 @@ val OnInfoContainer = Color(0xFF5367E0)
 // Neutral / Completed
 val NeutralContainer = Color(0xFFF4F5F7)
 val OnNeutralContainer = Color(0xFF7D828A)
+
+//icon green
+val IconGreen = Color(0xFF38763B)
+val BorderStoke = Color(0xFFE9ECEF)

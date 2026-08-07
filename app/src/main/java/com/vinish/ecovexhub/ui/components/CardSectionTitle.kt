@@ -13,6 +13,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.vinish.ecovexhub.theme.IconGreen
 
 
 @Composable
@@ -20,7 +21,7 @@ fun CardSectionTitle(
     startIcon: Int,
     sectionTitle: String,
     modifier: Modifier = Modifier,
-    iconTint: Color = Color(0xFF598044)
+    iconTint: Color = IconGreen
 
 ) {
     //icon and heading

@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material3.OutlinedTextFieldDefaults.contentPadding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -15,6 +16,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.vinish.ecovexhub.data.fake.eventList
+import com.vinish.ecovexhub.model.Event
+import com.vinish.ecovexhub.model.EventDetailsTab
 import com.vinish.ecovexhub.ui.components.HeroBannerCard
 import com.vinish.ecovexhub.ui.eventdetails.components.EventDetailsTopBar
 import com.vinish.ecovexhub.ui.eventdetails.components.EventGalleryTab
@@ -26,16 +30,20 @@ import com.vinish.ecovexhub.ui.eventdetails.components.EventOverviewTab
 import com.vinish.ecovexhub.ui.eventdetails.components.EventTabBar
 import com.vinish.ecovexhub.ui.eventdetails.components.EventTimelineTab
 
+
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
-fun EventsDetailsScreen(modifier: Modifier = Modifier) {
-    var selectedTab by rememberSaveable { mutableStateOf(0) }
+fun EventsDetailsScreen(
+    event: Event = eventList[1],
+    modifier: Modifier = Modifier
+) {
+    var selectedTab by rememberSaveable { mutableStateOf(EventDetailsTab.Overview) }
 
     LazyColumn(
         modifier = modifier
             .fillMaxSize()
             .padding(horizontal = 16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp),
+        verticalArrangement = Arrangement.spacedBy(22.dp),
         contentPadding = PaddingValues(bottom = 16.dp)
     ) {
 
@@ -48,18 +56,28 @@ fun EventsDetailsScreen(modifier: Modifier = Modifier) {
         item {
             EventTabBar(
                 selectedTab = selectedTab,
-                onTabSelected = {selectedTab = it}
+                onTabSelected = { selectedTab = it }
             )
         }
 
 
         item {
-            when(selectedTab){
-                0 -> EventOverviewTab()
-                1 -> EventTimelineTab()
-                2 -> EventGalleryTab()
-                3 -> EventLeaderboardTab()
-            }
+            TabContent(selectedTab = selectedTab, event = event)
         }
+    }
+}
+
+
+// tab content selector
+@Composable
+private fun TabContent(
+    selectedTab: EventDetailsTab,
+    event: Event
+) {
+    when (selectedTab) {
+        EventDetailsTab.Overview -> EventOverviewTab(event)
+        EventDetailsTab.Timeline -> EventTimelineTab(event)
+        EventDetailsTab.Gallery -> EventGalleryTab(event)
+        EventDetailsTab.Leaderboard -> EventLeaderboardTab(event)
     }
 }

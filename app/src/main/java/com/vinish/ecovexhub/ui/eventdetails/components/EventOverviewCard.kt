@@ -34,6 +34,7 @@ import com.vinish.ecovexhub.R
 import com.vinish.ecovexhub.model.Event
 import com.vinish.ecovexhub.model.EventCategory
 import com.vinish.ecovexhub.model.EventStatus
+import com.vinish.ecovexhub.theme.IconGreen
 import com.vinish.ecovexhub.ui.components.EventInfoChip
 
 @Preview(showSystemUi = true, showBackground = true)
@@ -77,7 +78,7 @@ fun EventOverviewCard(
                     Icon(
                         painter = painterResource(R.drawable.ic_brand_sapling_new),
                         contentDescription = null,
-                        tint = Color(0xFF598044)
+                        tint = IconGreen
                     )
                     Spacer(Modifier.width(4.dp))
 

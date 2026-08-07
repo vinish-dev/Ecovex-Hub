@@ -1,34 +1,37 @@
 package com.vinish.ecovexhub.ui.eventdetails.components
 
-import androidx.compose.material3.PrimaryTabRow
-import androidx.compose.material3.Tab
-import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.vinish.ecovexhub.model.EventDetailsTab
 
 
-@Preview(showSystemUi = true, showBackground = true)
 @Composable
 fun EventTabBar(
-    selectedTab: Int = 0,
-    onTabSelected: (Int) -> Unit = {},
+    selectedTab: EventDetailsTab,
+    onTabSelected: (EventDetailsTab) -> Unit,
     modifier: Modifier = Modifier
 ) {
-
-    PrimaryTabRow(
-        selectedTabIndex = selectedTab,
-        modifier = modifier
+    LazyRow(
+        modifier = modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        // from tabs enum
-        EventDetailsTab.entries.forEachIndexed { index,tab->
-            Tab(
-                selected = selectedTab == index,
-                onClick = { onTabSelected(index) },
-                text = { Text(tab.title) }
+
+        //each entry is a tab
+        items(EventDetailsTab.entries) { tab ->
+
+            EventTabChip(
+                text = tab.title,
+                selected = selectedTab == tab,
+                onClick = {
+                    onTabSelected(tab)
+                }
             )
         }
-
     }
 }
