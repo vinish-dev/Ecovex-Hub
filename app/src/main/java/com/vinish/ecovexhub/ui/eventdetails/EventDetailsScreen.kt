@@ -17,10 +17,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.vinish.ecovexhub.ui.components.HeroBannerCard
 import com.vinish.ecovexhub.ui.eventdetails.components.EventDetailsTopBar
+import com.vinish.ecovexhub.ui.eventdetails.components.EventGalleryTab
 import com.vinish.ecovexhub.ui.eventdetails.components.EventHighlightSection
+import com.vinish.ecovexhub.ui.eventdetails.components.EventLeaderboardTab
 
 import com.vinish.ecovexhub.ui.eventdetails.components.EventOverviewCard
+import com.vinish.ecovexhub.ui.eventdetails.components.EventOverviewTab
 import com.vinish.ecovexhub.ui.eventdetails.components.EventTabBar
+import com.vinish.ecovexhub.ui.eventdetails.components.EventTimelineTab
 
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
@@ -46,15 +50,16 @@ fun EventsDetailsScreen(modifier: Modifier = Modifier) {
                 selectedTab = selectedTab,
                 onTabSelected = {selectedTab = it}
             )
-            Spacer(Modifier.height(8.dp))
-
-            EventOverviewCard()
         }
+
 
         item {
-            EventHighlightSection()
-
+            when(selectedTab){
+                0 -> EventOverviewTab()
+                1 -> EventTimelineTab()
+                2 -> EventGalleryTab()
+                3 -> EventLeaderboardTab()
+            }
         }
-
     }
 }

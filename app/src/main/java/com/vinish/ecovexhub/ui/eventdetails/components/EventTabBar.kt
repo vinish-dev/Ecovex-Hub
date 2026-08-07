@@ -12,7 +12,7 @@ import com.vinish.ecovexhub.model.EventDetailsTab
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
 fun EventTabBar(
-    selectedTab: Int = 1,
+    selectedTab: Int = 0,
     onTabSelected: (Int) -> Unit = {},
     modifier: Modifier = Modifier
 ) {
@@ -29,5 +29,6 @@ fun EventTabBar(
                 text = { Text(tab.title) }
             )
         }
+
     }
 }
