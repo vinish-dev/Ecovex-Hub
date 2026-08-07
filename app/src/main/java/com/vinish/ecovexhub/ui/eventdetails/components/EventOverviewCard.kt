@@ -1,5 +1,6 @@
 package com.vinish.ecovexhub.ui.eventdetails.components
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -12,6 +13,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.HorizontalDivider
@@ -50,17 +52,18 @@ fun EventOverviewCard(
     ),
     modifier: Modifier = Modifier
 ) {
-    ElevatedCard(
+    Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White)
+        colors = CardDefaults.cardColors(containerColor = Color.White),
+        border = BorderStroke( width = 1.dp, color =  Color(0xFFE9ECEF))
     ) {
         Box() {
             Image(
-                modifier = Modifier.align(Alignment.BottomEnd),
-                painter = painterResource(R.drawable.img_overview_bg_gpt2),
+                modifier = Modifier.matchParentSize(),
+                painter = painterResource(R.drawable.img_overview_bg_gpt1),
                 contentDescription = null,
-                contentScale = ContentScale.Fit
+                contentScale = ContentScale.FillHeight
             )
 
 

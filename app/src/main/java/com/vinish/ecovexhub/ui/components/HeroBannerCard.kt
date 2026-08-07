@@ -45,7 +45,7 @@ fun HeroBannerCard(
         imageRes = R.drawable.img_plant_challenge,
         time = "9:30 AM"
     ),
-    modifier: Modifier = Modifier.padding( 16.dp)
+    modifier: Modifier = Modifier
 ) {
     Card(
         modifier = modifier
@@ -60,7 +60,7 @@ fun HeroBannerCard(
             //banner bg img
             Image(
                 modifier = Modifier.matchParentSize(),
-                painter = painterResource(event.imageRes?:R.drawable.img_saplings_banner),
+                painter = painterResource(event.imageRes ?: R.drawable.img_saplings_banner),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
             )
@@ -111,9 +111,10 @@ fun HeroBannerCard(
             }
 
             //bottom row
-            Row(modifier = Modifier
-                .align(Alignment.BottomStart)
-                .padding(16.dp)
+            Row(
+                modifier = Modifier
+                    .align(Alignment.BottomStart)
+                    .padding(16.dp)
             ) {
                 //calendar icon
                 EventInfoChip(
