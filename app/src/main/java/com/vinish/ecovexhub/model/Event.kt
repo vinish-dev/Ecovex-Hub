@@ -20,8 +20,10 @@ data class Event(
     val date: String,
     val registrationDeadline: String = "18 September 2026",
 
-    //timeline(for timeline tab in eventDetails screen)
+    //timeline (for timeline tab in eventDetails screen)
     val timeline: List<TimelineItem> = emptyList(),
+
+
 
     // Location
     val venue: String = "Main Campus",
@@ -37,6 +39,8 @@ data class Event(
 
     // Event Extras
     val highlights: List<EventHighlight> = emptyList(),
+
+    //galleryImages (for gallery tab in eventDetails screen)
     val galleryImages: List<Int> = emptyList()
 )
 

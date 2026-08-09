@@ -39,7 +39,8 @@ val eventList = listOf<Event>(
         timeline = timeline,
         location = "Ecovex Workshop",
         imageRes = R.drawable.img_plant_challenge,
-        time = "9:00 AM"
+        time = "9:00 AM",
+        galleryImages = eventGalleryImages
     ),
     Event(
         id = 4,
