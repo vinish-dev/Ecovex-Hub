@@ -83,7 +83,7 @@ private fun TabContent(
 ) {
     when (selectedTab) {
         EventDetailsTab.Overview -> EventOverviewTab(event)
-        EventDetailsTab.Timeline -> EventTimelineTab(event)
+        EventDetailsTab.Timeline -> EventTimelineTab(event, modifier = Modifier.padding(16.dp))
         EventDetailsTab.Gallery -> EventGalleryTab(event)
         EventDetailsTab.Leaderboard -> EventLeaderboardTab(event)
     }
