@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material3.OutlinedTextFieldDefaults.contentPadding
+import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -22,13 +22,11 @@ import com.vinish.ecovexhub.model.EventDetailsTab
 import com.vinish.ecovexhub.ui.components.HeroBannerCard
 import com.vinish.ecovexhub.ui.eventdetails.components.EventDetailsTopBar
 import com.vinish.ecovexhub.ui.eventdetails.components.EventGalleryTab
-import com.vinish.ecovexhub.ui.eventdetails.components.EventHighlightSection
 import com.vinish.ecovexhub.ui.eventdetails.components.EventLeaderboardTab
-
-import com.vinish.ecovexhub.ui.eventdetails.components.EventOverviewCard
 import com.vinish.ecovexhub.ui.eventdetails.components.EventOverviewTab
 import com.vinish.ecovexhub.ui.eventdetails.components.EventTabBar
 import com.vinish.ecovexhub.ui.eventdetails.components.EventTimelineTab
+import com.vinish.ecovexhub.ui.eventdetails.components.RegisterSection
 
 
 @Preview(showSystemUi = true, showBackground = true)
@@ -39,32 +37,39 @@ fun EventsDetailsScreen(
 ) {
     var selectedTab by rememberSaveable { mutableStateOf(EventDetailsTab.Overview) }
 
-    LazyColumn(
-        modifier = modifier
-            .fillMaxSize()
-            .padding(horizontal = 16.dp),
-        verticalArrangement = Arrangement.spacedBy(22.dp),
-        contentPadding = PaddingValues(bottom = 16.dp)
-    ) {
+    Scaffold(
+        bottomBar = {
+            RegisterSection(onRegClick = {}, onHeartClick = {}, modifier = Modifier.padding(16.dp))}
+    ) {  innerPadding ->
+        LazyColumn(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding).padding(horizontal = 16.dp),
+            verticalArrangement = Arrangement.spacedBy(22.dp),
+            contentPadding = PaddingValues(bottom = 16.dp)
+        ) {
 
-        item {
-            EventDetailsTopBar()
-            Spacer(Modifier.height(8.dp))
-            HeroBannerCard()
-        }
+            item {
+                EventDetailsTopBar()
+                Spacer(Modifier.height(8.dp))
+                HeroBannerCard()
+            }
 
-        item {
-            EventTabBar(
-                selectedTab = selectedTab,
-                onTabSelected = { selectedTab = it }
-            )
-        }
+            item {
+                EventTabBar(
+                    selectedTab = selectedTab,
+                    onTabSelected = { selectedTab = it }
+                )
+            }
 
 
-        item {
-            TabContent(selectedTab = selectedTab, event = event)
+            item {
+                TabContent(selectedTab = selectedTab, event = event)
+            }
+
         }
     }
+
 }
 
 
