@@ -14,7 +14,9 @@ fun EventOverviewTab(
     event: Event,
     modifier: Modifier = Modifier) {
     Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-        EventOverviewCard()
+        EventOverviewCard(
+            event = event
+        )
         EventHighlightSection()
     }
 }

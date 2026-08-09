@@ -32,7 +32,7 @@ import com.vinish.ecovexhub.ui.eventdetails.components.RegisterSection
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
 fun EventsDetailsScreen(
-    event: Event = eventList[1],
+    event: Event = eventList[2],
     modifier: Modifier = Modifier
 ) {
     var selectedTab by rememberSaveable { mutableStateOf(EventDetailsTab.Overview) }
@@ -52,7 +52,9 @@ fun EventsDetailsScreen(
             item {
                 EventDetailsTopBar()
                 Spacer(Modifier.height(8.dp))
-                HeroBannerCard()
+                HeroBannerCard(
+                    event = event
+                )
             }
 
             item {

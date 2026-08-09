@@ -31,20 +31,9 @@ import com.vinish.ecovexhub.model.Event
 import com.vinish.ecovexhub.model.EventCategory
 import com.vinish.ecovexhub.model.EventStatus
 
-@Preview(showSystemUi = true, showBackground = true)
 @Composable
 fun HeroBannerCard(
-    event: Event = Event(
-        id = 2,
-        title = "Sustainability Workshop",
-        description = "Join us in our mission to make the camp greener and healthier. Together we can create a better environment For future generation ",
-        category = EventCategory.WORKSHOP,
-        status = EventStatus.ONGOING,
-        date = "20 Sep 2026",
-        location = "Seminar Hall",
-        imageRes = R.drawable.img_plant_challenge,
-        time = "9:30 AM"
-    ),
+    event: Event,
     modifier: Modifier = Modifier
 ) {
     Card(
