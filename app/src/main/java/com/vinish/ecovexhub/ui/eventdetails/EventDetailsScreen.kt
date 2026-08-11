@@ -21,12 +21,11 @@ import com.vinish.ecovexhub.model.Event
 import com.vinish.ecovexhub.model.EventDetailsTab
 import com.vinish.ecovexhub.ui.components.HeroBannerCard
 import com.vinish.ecovexhub.ui.eventdetails.components.EventDetailsTopBar
-import com.vinish.ecovexhub.ui.eventdetails.components.EventGalleryTab
-import com.vinish.ecovexhub.ui.eventdetails.components.EventLeaderboardTab
-import com.vinish.ecovexhub.ui.eventdetails.components.EventOverviewTab
+import com.vinish.ecovexhub.ui.eventdetails.tabs.EventGalleryTab
+import com.vinish.ecovexhub.ui.eventdetails.tabs.EventLeaderboardTab
+import com.vinish.ecovexhub.ui.eventdetails.tabs.EventOverviewTab
 import com.vinish.ecovexhub.ui.eventdetails.components.EventTabBar
-import com.vinish.ecovexhub.ui.eventdetails.components.EventTimelineTab
-import com.vinish.ecovexhub.ui.eventdetails.components.RegisterSection
+import com.vinish.ecovexhub.ui.eventdetails.tabs.EventTimelineTab
 
 
 @Preview(showSystemUi = true, showBackground = true)

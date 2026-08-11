@@ -57,6 +57,7 @@ fun EventInfoChip(
                 contentDescription = null
             )
         }
+
         // content
         Spacer(Modifier.width(12.dp))
 
