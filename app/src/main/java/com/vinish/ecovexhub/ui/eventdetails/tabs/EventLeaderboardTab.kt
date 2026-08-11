@@ -1,4 +1,4 @@
-package com.vinish.ecovexhub.ui.eventdetails.components
+package com.vinish.ecovexhub.ui.eventdetails.tabs
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 import com.vinish.ecovexhub.model.Event
 
 @Composable
-fun EventGalleryTab(
+fun EventLeaderboardTab(
     event: Event,
     modifier: Modifier = Modifier) {
     Column(
