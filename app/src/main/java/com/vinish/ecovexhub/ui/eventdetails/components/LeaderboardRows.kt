@@ -1,5 +1,6 @@
 package com.vinish.ecovexhub.ui.eventdetails.components
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -22,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.vinish.ecovexhub.data.fake.leaderboard
@@ -31,7 +33,7 @@ import com.vinish.ecovexhub.theme.IconGreen
 
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
-fun LeaderboardList(
+fun LeaderboardRows(
     entries: List<LeaderboardEntry> = leaderboard, modifier: Modifier = Modifier
 ) {
     Column(
@@ -83,29 +85,30 @@ private fun LeaderboardCardRow(
         modifier = modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically
     ) {
         //rank text
-        Text(
-            text = rank.toString(),
-            style = MaterialTheme.typography.titleMedium,
-            color = EcovexGreen
-        )
-        Spacer(Modifier.width(30.dp))
+        Box(modifier = Modifier.width(40.dp)) {
+            Text(
+                text = rank.toString(),
+                style = MaterialTheme.typography.titleMedium,
+                color = EcovexGreen
+            )
+        }
+
 
         //profile icon box
         Box(
             modifier = Modifier
-                .clip(shape = RoundedCornerShape(12.dp))
+                .clip(shape = RoundedCornerShape(999.dp))
                 .background(color = Color(0xFFEFF4E8))
                 .size(36.dp),
             contentAlignment = Alignment.Center
         ) {
-            Icon(
+            Image(
                 painter = painterResource(entry.avatarIconRes),
                 contentDescription = null,
-                tint = IconGreen
             )
         }
         Spacer(Modifier.width(10.dp))
-        Text(text = entry.name)
+        Text(text = entry.name, fontWeight = FontWeight.W400)
 
         Spacer(Modifier.weight(1f))
 

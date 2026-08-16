@@ -31,7 +31,7 @@ import com.vinish.ecovexhub.model.Event
 import com.vinish.ecovexhub.theme.BorderStoke
 import com.vinish.ecovexhub.theme.IconBg
 import com.vinish.ecovexhub.theme.IconGreen
-import com.vinish.ecovexhub.ui.eventdetails.components.LeaderboardList
+import com.vinish.ecovexhub.ui.eventdetails.components.LeaderboardRows
 import com.vinish.ecovexhub.ui.eventdetails.components.PodiumSection
 
 @Preview(showSystemUi = true, showBackground = true)
@@ -60,7 +60,7 @@ fun EventLeaderboardTab(
 
             PodiumSection(topThree = topThree)
 
-            LeaderboardList(entries = remaining, modifier = Modifier.padding(horizontal = 16.dp))
+            LeaderboardRows(entries = remaining, modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp))
         }
     }
 

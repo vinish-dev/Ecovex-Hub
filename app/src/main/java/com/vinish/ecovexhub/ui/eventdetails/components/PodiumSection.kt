@@ -2,6 +2,7 @@ package com.vinish.ecovexhub.ui.eventdetails.components
 
 import android.R.attr.bottom
 import android.text.Layout
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -86,7 +87,7 @@ fun PodiumSection(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 24.dp),
+            .padding(horizontal = 16.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalAlignment = Alignment.Bottom
     ) {
@@ -107,8 +108,6 @@ private fun PodiumColumn(
 ) {
 
     val style = podiumStyleFor(rank)
-
-
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -138,10 +137,10 @@ private fun PodiumColumn(
                 contentAlignment = Alignment.Center
             ) {
                 //avatar
-                Icon(
+                Image(
                     painter = painterResource(user.avatarIconRes),
                     contentDescription = user.name,
-                    tint = IconGreen,
+//                    tint = IconGreen,
                     modifier = Modifier.size(style.avatarSize * 0.55f)
                 )
 
