@@ -35,3 +35,13 @@ val BorderStoke = Color(0xFFE9ECEF)
 
 //bg for green tinted icon
 val IconBg = Color(0xFFEFF4E8)
+
+// --- Podium Colors ---
+val GoldColor = Color(0xFFE5B842)
+val GoldPodium = Color(0xFFFDF2D3)
+val SilverColor = Color(0xFFA0A0A0)
+val SilverPodium = Color(0xFFF0F0F0)
+val BronzeColor = Color(0xFFD49A6A)
+val BronzePodium = Color(0xFFFAF0E6)
+val PointsColor = Color(0xFF388E3C)
+

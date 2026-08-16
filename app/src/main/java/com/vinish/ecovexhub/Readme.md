@@ -5,3 +5,4 @@
 
 <a href="https://www.flaticon.com/free-icons/student" title="student icons">Student icons created by Magnific - Flaticon</a>
 
+<a href="https://www.flaticon.com/free-icons/crown" title="crown icons">Crown icons created by Magnific - Flaticon</a>

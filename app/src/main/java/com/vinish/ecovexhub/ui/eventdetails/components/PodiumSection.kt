@@ -36,8 +36,14 @@ import androidx.compose.ui.unit.sp
 import com.vinish.ecovexhub.R
 import com.vinish.ecovexhub.model.EventHighlight
 import com.vinish.ecovexhub.model.LeaderboardEntry
+import com.vinish.ecovexhub.theme.BronzeColor
+import com.vinish.ecovexhub.theme.BronzePodium
 import com.vinish.ecovexhub.theme.EcovexGreen
+import com.vinish.ecovexhub.theme.GoldColor
+import com.vinish.ecovexhub.theme.GoldPodium
 import com.vinish.ecovexhub.theme.IconGreen
+import com.vinish.ecovexhub.theme.SilverColor
+import com.vinish.ecovexhub.theme.SilverPodium
 
 // for podium column and avatar
 data class PodiumStyle(
@@ -115,11 +121,17 @@ private fun PodiumColumn(
     ) {
         // crown for 1st place
         if (rank == 1) {
-            Text(
-                text = "\uD83D\uDC51",
-                fontSize = 28.sp,
-                modifier = Modifier.padding(bottom = 4.dp)
-            )
+//            Text(
+//                text = "\uD83D\uDC51",
+//                fontSize = 28.sp,
+//                modifier = Modifier.padding(bottom = 4.dp)
+//            )
+            Box(modifier = Modifier.size(36.dp)){
+                Image(
+                    painter = painterResource(R.drawable.ic_crown),
+                    contentDescription = null
+                )
+            }
         }
 
         // Avatar + Rank Badge Overlay
