@@ -37,11 +37,18 @@ data class Event(
     val maxParticipants: Int? = null,
     val registeredParticipants: Int? = null,
 
-    // Event Extras
+
+
+    //Extras
+
+    // Event highlight
     val highlights: List<EventHighlight> = emptyList(),
 
     //galleryImages (for gallery tab in eventDetails screen)
-    val galleryImages: List<Int> = emptyList()
+    val galleryImages: List<Int> = emptyList(),
+
+    //leaderboard
+    val leaderboard: List<LeaderboardEntry> = com.vinish.ecovexhub.data.fake.leaderboard
 )
 
 

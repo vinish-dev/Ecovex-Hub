@@ -6,6 +6,6 @@ data class LeaderboardEntry(
     val id: Int,
     val name: String,
     val points: Int,
-    val iconRes: Int = R.drawable.ic_person
+    val avatarIconRes: Int = R.drawable.ic_person
 )
 

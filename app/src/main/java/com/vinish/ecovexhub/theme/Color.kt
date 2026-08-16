@@ -32,3 +32,6 @@ val OnNeutralContainer = Color(0xFF7D828A)
 //icon green
 val IconGreen = Color(0xFF38763B)
 val BorderStoke = Color(0xFFE9ECEF)
+
+//bg for green tinted icon
+val IconBg = Color(0xFFEFF4E8)
