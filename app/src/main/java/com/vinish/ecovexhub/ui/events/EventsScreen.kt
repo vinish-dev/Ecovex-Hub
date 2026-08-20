@@ -83,7 +83,7 @@ fun EventsScreen(
         EventFilterBar(
             selectedFilter = selectedFilter,
             onClick = { filter -> selectedFilter = filter },
-            modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)
+            modifier = Modifier.padding(horizontal = 16.dp, vertical = 5.dp)
         )
 
         //events column
