@@ -106,8 +106,7 @@ private fun SearchTopBar(
     //main row
     Row(
         modifier = modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp),
+            .fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically
     ) {
 
