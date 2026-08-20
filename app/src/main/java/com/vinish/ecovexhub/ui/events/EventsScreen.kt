@@ -24,7 +24,9 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.rememberNavController
 import com.vinish.ecovexhub.data.fake.eventList
 import com.vinish.ecovexhub.model.Event
+import com.vinish.ecovexhub.model.EventStatus
 import com.vinish.ecovexhub.ui.components.EventCard
+import com.vinish.ecovexhub.ui.events.components.EventFilterBar
 import com.vinish.ecovexhub.ui.events.components.EventsTopBar
 
 //@Preview(showSystemUi = true, showBackground = true)
@@ -34,21 +36,34 @@ fun EventsScreen(
     modifier: Modifier = Modifier
 ) {
 
+
     //TODO: Move search state to EventsViewModel.
+
+    var selectedFilter by rememberSaveable { mutableStateOf<EventStatus?>(null) }
+
     var isSearching by rememberSaveable { mutableStateOf(false) }
 
     var searchQuery by rememberSaveable { mutableStateOf("") }
 
+
     // TODO(ViewModel): Move filtering logic to EventsViewModel.
-    val filteredEvents =
-        if(searchQuery.isBlank()){
-            eventList
-        } else {
-            eventList.filter { event ->
-                event.title.contains(searchQuery, ignoreCase = true) ||
-                event.category.displayName.contains(searchQuery, ignoreCase = true)
-            }
-        }
+
+    val filteredEvents = eventList.filter { event ->
+        // include this event if search query is empty or search contains this event
+        val matchesSearch =
+            searchQuery.isBlank() ||
+                    event.title.contains(searchQuery, ignoreCase = true) ||
+                    event.category.displayName.contains(searchQuery, ignoreCase = true)
+
+        // check if this event's category = selected filter
+        val matchesFilter =
+            selectedFilter ==
+                    null||
+                    event.status == selectedFilter
+
+        matchesFilter && matchesSearch
+    }
+
 
     Column(
         modifier = modifier.fillMaxSize()
@@ -64,8 +79,11 @@ fun EventsScreen(
             modifier = Modifier.background(Color.White)
         )
 
-        Spacer(modifier = Modifier.height(16.dp))
-
+        EventFilterBar(
+            selectedFilter = selectedFilter,
+            onClick = { filter -> selectedFilter = filter },
+            modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
+        )
         //events column
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
@@ -82,5 +100,4 @@ fun EventsScreen(
             }
         }
     }
-
 }
