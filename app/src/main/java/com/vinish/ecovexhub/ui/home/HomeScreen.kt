@@ -12,6 +12,7 @@ import androidx.compose.ui.unit.dp
 import com.vinish.ecovexhub.data.fake.eventList
 import com.vinish.ecovexhub.data.fake.statList
 import com.vinish.ecovexhub.data.fake.updatesList
+import com.vinish.ecovexhub.model.Event
 import com.vinish.ecovexhub.ui.home.components.GreetingSection
 import com.vinish.ecovexhub.ui.home.components.HomeTopBar
 import com.vinish.ecovexhub.ui.home.components.LatestUpdateSection
@@ -19,9 +20,12 @@ import com.vinish.ecovexhub.ui.home.components.OverviewSection
 import com.vinish.ecovexhub.ui.home.components.TreeExplorerCard
 import com.vinish.ecovexhub.ui.home.components.UpcomingEventsSection
 
-@Preview(showSystemUi = true, showBackground = true)
+//@Preview(showSystemUi = true, showBackground = true)
 @Composable
-fun HomeScreen(modifier: Modifier = Modifier) {
+fun HomeScreen(
+    modifier: Modifier = Modifier,
+    onEventClick: (Event) -> Unit
+) {
     LazyColumn(
         modifier = modifier.fillMaxSize(),
         contentPadding = PaddingValues(
@@ -54,7 +58,7 @@ fun HomeScreen(modifier: Modifier = Modifier) {
 
 
             //Upcoming events section
-            UpcomingEventsSection(events = eventList.take(2))
+            UpcomingEventsSection(events = eventList.take(2), onEventClick = onEventClick)
 
             //Latest updates section
             LatestUpdateSection(updates = updatesList.take(1))

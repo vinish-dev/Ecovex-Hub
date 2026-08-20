@@ -21,13 +21,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.rememberNavController
 import com.vinish.ecovexhub.data.fake.eventList
+import com.vinish.ecovexhub.model.Event
 import com.vinish.ecovexhub.ui.components.EventCard
 import com.vinish.ecovexhub.ui.events.components.EventsTopBar
 
-@Preview(showSystemUi = true, showBackground = true)
+//@Preview(showSystemUi = true, showBackground = true)
 @Composable
-fun EventsScreen(modifier: Modifier = Modifier) {
+fun EventsScreen(
+    onEventClick: (Event) -> Unit,
+    modifier: Modifier = Modifier
+) {
 
     //TODO: Move search state to EventsViewModel.
     var isSearching by rememberSaveable { mutableStateOf(false) }
@@ -41,8 +46,7 @@ fun EventsScreen(modifier: Modifier = Modifier) {
         } else {
             eventList.filter { event ->
                 event.title.contains(searchQuery, ignoreCase = true) ||
-                event.category.displayName.contains(searchQuery, ignoreCase = true) ||
-                event.title.contains(searchQuery, ignoreCase = true)
+                event.category.displayName.contains(searchQuery, ignoreCase = true)
             }
         }
 
@@ -50,6 +54,7 @@ fun EventsScreen(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize()
     ) {
 
+        // top bar
         EventsTopBar(
             isSearching = isSearching,
             searchQuery = searchQuery,
@@ -61,6 +66,7 @@ fun EventsScreen(modifier: Modifier = Modifier) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
+        //events column
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
             contentPadding = PaddingValues(
@@ -69,7 +75,10 @@ fun EventsScreen(modifier: Modifier = Modifier) {
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             items(filteredEvents) { event ->
-                EventCard(event = event)
+                EventCard(
+                    event = event,
+                    onClick = { onEventClick(event) } //pass lambda that has a func call
+                )
             }
         }
     }

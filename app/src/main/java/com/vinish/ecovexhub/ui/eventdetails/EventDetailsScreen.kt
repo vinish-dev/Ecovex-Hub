@@ -32,6 +32,7 @@ import com.vinish.ecovexhub.ui.eventdetails.tabs.EventTimelineTab
 @Composable
 fun EventsDetailsScreen(
     event: Event = eventList[2],
+    onBackClick: () -> Unit ={},
     modifier: Modifier = Modifier
 ) {
     var selectedTab by rememberSaveable { mutableStateOf(EventDetailsTab.Overview) }
@@ -49,7 +50,9 @@ fun EventsDetailsScreen(
         ) {
 
             item {
-                EventDetailsTopBar()
+                EventDetailsTopBar(
+                    onBackClick = onBackClick
+                )
                 Spacer(Modifier.height(8.dp))
                 HeroBannerCard(
                     event = event

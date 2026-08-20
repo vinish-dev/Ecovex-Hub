@@ -13,13 +13,16 @@ import androidx.compose.ui.unit.dp
 import com.vinish.ecovexhub.R
 
 @Composable
-fun EventDetailsTopBar(modifier: Modifier = Modifier) {
+fun EventDetailsTopBar(
+    onBackClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
     Row(
         modifier = modifier
     ) {
         //back button
         IconButton(
-            onClick = {}
+            onClick = onBackClick
         ) {
             Icon(
                 painter = painterResource(R.drawable.ic_back),

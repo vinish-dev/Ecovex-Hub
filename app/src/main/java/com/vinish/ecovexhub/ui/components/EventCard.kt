@@ -34,7 +34,7 @@ import com.vinish.ecovexhub.model.EventStatus
 @Composable
 fun EventCard(
     event: Event,
-    onClick: () -> Unit = {},
+    onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Card(

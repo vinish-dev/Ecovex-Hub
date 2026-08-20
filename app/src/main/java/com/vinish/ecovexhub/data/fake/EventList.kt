@@ -15,6 +15,7 @@ val eventList = listOf<Event>(
         status = EventStatus.UPCOMING,
         date = "05 Sep 2026",
         location = "Main Campus",
+        timeline = timeline,
         imageRes = R.drawable.img_saplings_banner,
         time = "8:00 AM"
     ),
@@ -26,6 +27,7 @@ val eventList = listOf<Event>(
         status = EventStatus.ONGOING,
         date = "20 Sep 2026",
         location = "Seminar Hall",
+        timeline = timeline,
         imageRes = R.drawable.img_sustainability_workshop,
         time = "9:30 AM"
     ),
