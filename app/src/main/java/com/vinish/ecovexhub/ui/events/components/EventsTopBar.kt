@@ -88,7 +88,7 @@ private fun NormalTopBar(
                 contentDescription = null
             )
         }
-        Spacer(Modifier.width(6.dp))
+
     }
 }
 
@@ -100,7 +100,7 @@ private fun SearchTopBar(
     modifier: Modifier = Modifier
 
 ) {
-    // auto focus
+    // autofocus
     val focusRequester = remember { FocusRequester() }
 
     //main row

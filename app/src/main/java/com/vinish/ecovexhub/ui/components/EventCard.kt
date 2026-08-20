@@ -1,6 +1,7 @@
 package com.vinish.ecovexhub.ui.components
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -20,6 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Color.Companion.DarkGray
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -38,7 +40,7 @@ fun EventCard(
     modifier: Modifier = Modifier
 ) {
     Card(
-        modifier = modifier.fillMaxWidth().height(118.dp),
+        modifier = modifier.fillMaxWidth().height(112.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
         shape = RoundedCornerShape(16.dp),
         onClick = onClick
@@ -60,26 +62,29 @@ fun EventCard(
 
             //content
             Column(
-                modifier = Modifier.weight(1f)
+                modifier = Modifier.weight(1f),
+                verticalArrangement = Arrangement.spacedBy(4.dp)
             ) {
                 Text(
                     text = event.title,
-                    style = MaterialTheme.typography.titleMedium,
+                    style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.SemiBold,
 
                     )
-                Spacer(Modifier.height(8.dp))
+
+                Spacer(Modifier.height(1.dp))
 
                 //category and status row
                 Row(
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Text(event.category.displayName, color = Color.Gray, style = MaterialTheme.typography.labelMedium)
-                    Spacer(Modifier.weight(1f))
                     StatusChip(event.status)
                 }
 
-                Spacer(Modifier.height(8.dp))
+
 
                 //calendar icon and date
                 Row(
@@ -87,12 +92,13 @@ fun EventCard(
                 ) {
                     Icon(
                         painter = painterResource(R.drawable.ic_calendar_clock_16dp),
-                        contentDescription = null
+                        contentDescription = null,
+                        tint = Color.DarkGray
                     )
                     Spacer(Modifier.width(4.dp))
-                    Text(text = event.date, fontSize = 12.sp)
+                    Text(text = event.date, fontSize = 12.sp, color = Color.DarkGray)
                     Text(" • ")
-                    Text(text = event.location, fontSize = 12.sp)
+                    Text(text = event.location, fontSize = 12.sp, color = Color.DarkGray)
                 }
             }
         }

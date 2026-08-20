@@ -9,6 +9,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.vinish.ecovexhub.model.EventStatus
 import com.vinish.ecovexhub.theme.InfoContainer
@@ -35,7 +36,7 @@ fun StatusChip(
         modifier = Modifier
             .clip(RoundedCornerShape(999.dp))
             .background(containerColor)
-            .padding(horizontal = 10.dp, vertical = 5.dp),
+            .padding(horizontal = 8.dp, vertical = 4.dp),
     ) {
         Text(
             text = text,
@@ -44,4 +45,10 @@ fun StatusChip(
         )
     }
 
+}
+
+@Preview(showSystemUi = true, showBackground = true)
+@Composable
+fun StatusChipPreview(){
+    StatusChip(EventStatus.UPCOMING)
 }
