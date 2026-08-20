@@ -108,7 +108,7 @@ private fun LeaderboardCardRow(
             )
         }
         Spacer(Modifier.width(10.dp))
-        Text(text = entry.name, fontWeight = FontWeight.W400)
+        Text(text = entry.name, fontWeight = FontWeight.W400, style = MaterialTheme.typography.titleSmall )
 
         Spacer(Modifier.weight(1f))
 
