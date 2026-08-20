@@ -1,10 +1,19 @@
 package com.vinish.ecovexhub.ui.updates
 
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import com.vinish.ecovexhub.ui.updates.components.UpdatesTopBar
 
 @Composable
 fun UpdatesScreen(modifier: Modifier = Modifier) {
-    Text("Updates")
+    Column(
+        modifier = modifier.fillMaxWidth().padding(horizontal = 8.dp)
+    ) {
+        UpdatesTopBar()
+    }
 }
