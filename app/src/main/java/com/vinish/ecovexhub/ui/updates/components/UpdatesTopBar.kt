@@ -37,7 +37,7 @@ fun UpdatesTopBar(
     onCreate: () -> Unit = {}
 ) {
     Row(
-        modifier = modifier.fillMaxWidth().statusBarsPadding(),
+        modifier = modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {

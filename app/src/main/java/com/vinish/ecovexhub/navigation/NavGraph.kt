@@ -30,7 +30,9 @@ fun EcovexNavGraph(navController: NavHostController, modifier: Modifier = Modifi
         }
 
         composable(Routes.Updates.route) {
-            UpdatesScreen()
+            UpdatesScreen(
+                modifier = modifier
+            )
         }
 
         composable(Routes.Events.route) {
@@ -43,7 +45,9 @@ fun EcovexNavGraph(navController: NavHostController, modifier: Modifier = Modifi
         }
 
         composable(Routes.Explore.route) {
-            ExploreScreen()
+            ExploreScreen(
+                modifier = modifier
+            )
         }
 
         composable(Routes.Profile.route) {
