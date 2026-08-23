@@ -5,5 +5,5 @@ data class Update(
     val title: String,
     val description: String,
     val time: String,
-    val type: UpdateType
+    val type: PostType
 )

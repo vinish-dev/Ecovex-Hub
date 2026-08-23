@@ -3,7 +3,7 @@ package com.vinish.ecovexhub.model
 import androidx.compose.ui.graphics.Color
 import com.vinish.ecovexhub.R
 
-enum class UpdateType(val bg: Color, val tint: Color, val icon: Int ) {
+enum class PostType(val bg: Color, val tint: Color, val icon: Int ) {
 
     ANNOUNCEMENT(Color(0xFFE8F5E9), Color(0xFF2E7D32), R.drawable.campaign),
 
