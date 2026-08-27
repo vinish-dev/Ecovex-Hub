@@ -10,7 +10,7 @@ val exploreBanners = listOf(
         subtitle = "Nurturing nature, inspiring change."
     ),
     ExploreBanner(
-        imgBanner = R.drawable.banner_img2,
+        imgBanner = R.drawable.banner_img4,
         title = "Growing a Greener Campus",
         subtitle = "Every tree makes a difference."
     ),
