@@ -256,3 +256,5 @@ val BronzeColor = Color(0xFFD49A6A)
 val BronzePodium = Color(0xFFFAF0E6)
 val PointsColor = Color(0xFF388E3C)
 
+// profile picture bg fill
+val ProfileBgFillColor = Color(0xFFEFF4E8)

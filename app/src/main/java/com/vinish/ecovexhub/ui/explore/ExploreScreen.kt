@@ -12,7 +12,9 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.vinish.ecovexhub.data.fake.clubMembers
 import com.vinish.ecovexhub.data.fake.exploreBanners
+import com.vinish.ecovexhub.ui.explore.components.ClubMemberSection
 import com.vinish.ecovexhub.ui.explore.components.ExploreBannerSection
 import com.vinish.ecovexhub.ui.explore.components.ExploreSearchBar
 import com.vinish.ecovexhub.ui.explore.components.ExploreTopBar
@@ -25,7 +27,7 @@ fun ExploreScreen(modifier: Modifier = Modifier) {
     LazyColumn(
         modifier = modifier.fillMaxSize(),
         contentPadding = PaddingValues(
-            horizontal = 16.dp
+            start = 16.dp, end = 16.dp, bottom = 20.dp
         ),
         verticalArrangement = Arrangement.spacedBy(20.dp)
     ) {
@@ -42,7 +44,8 @@ fun ExploreScreen(modifier: Modifier = Modifier) {
             FeaturedTreesSection()
 
         }
-        item {/*todo*/
+        item {
+            ClubMemberSection(clubMembers = clubMembers)
         }
     }
 }
