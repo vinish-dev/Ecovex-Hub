@@ -13,6 +13,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import com.vinish.ecovexhub.theme.EcovexGreen
+import com.vinish.ecovexhub.theme.IconGreen
 import com.vinish.ecovexhub.theme.ViewAllBlue
 
 @Composable
@@ -40,7 +42,7 @@ fun SectionHeader(
                 Text(
                     text = "View All",
                     fontWeight = FontWeight.Bold,
-                    color = ViewAllBlue
+                    color = IconGreen
                     )
             }
         }

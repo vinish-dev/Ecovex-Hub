@@ -42,7 +42,7 @@ fun ExploreScreen(modifier: Modifier = Modifier) {
             FeaturedTreesSection()
 
         }
-        item {
+        item {/*todo*/
         }
     }
 }
