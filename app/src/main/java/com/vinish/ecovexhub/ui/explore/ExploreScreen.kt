@@ -12,8 +12,11 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.vinish.ecovexhub.data.fake.exploreBanners
+import com.vinish.ecovexhub.ui.explore.components.ExploreBannerSection
 import com.vinish.ecovexhub.ui.explore.components.ExploreSearchBar
 import com.vinish.ecovexhub.ui.explore.components.ExploreTopBar
+import com.vinish.ecovexhub.ui.explore.components.FeaturedTreesSection
 
 @Composable
 fun ExploreScreen(modifier: Modifier = Modifier) {
@@ -32,6 +35,14 @@ fun ExploreScreen(modifier: Modifier = Modifier) {
 
         item {
             ExploreSearchBar(query = searchQuery, onQueryChange = { searchQuery = it })
+        }
+
+        item {
+            ExploreBannerSection(banners = exploreBanners)
+            FeaturedTreesSection()
+
+        }
+        item {
         }
     }
 }
