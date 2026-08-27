@@ -12,8 +12,10 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.vinish.ecovexhub.data.fake.campusImageList
 import com.vinish.ecovexhub.data.fake.clubMembers
 import com.vinish.ecovexhub.data.fake.exploreBanners
+import com.vinish.ecovexhub.ui.explore.components.CampusGallerySection
 import com.vinish.ecovexhub.ui.explore.components.ClubMemberSection
 import com.vinish.ecovexhub.ui.explore.components.ExploreBannerSection
 import com.vinish.ecovexhub.ui.explore.components.ExploreSearchBar
@@ -46,6 +48,9 @@ fun ExploreScreen(modifier: Modifier = Modifier) {
         }
         item {
             ClubMemberSection(clubMembers = clubMembers)
+        }
+        item {
+            CampusGallerySection(campusImages = campusImageList)
         }
     }
 }
