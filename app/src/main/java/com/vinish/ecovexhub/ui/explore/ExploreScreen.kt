@@ -16,6 +16,7 @@ import com.vinish.ecovexhub.data.fake.campusImageList
 import com.vinish.ecovexhub.data.fake.clubMembers
 import com.vinish.ecovexhub.data.fake.exploreBanners
 import com.vinish.ecovexhub.data.fake.sustainabilityTips
+import com.vinish.ecovexhub.data.fake.treeOfTheMonth
 import com.vinish.ecovexhub.ui.explore.components.CampusGallerySection
 import com.vinish.ecovexhub.ui.explore.components.ClubMemberSection
 import com.vinish.ecovexhub.ui.explore.components.ExploreBannerSection
@@ -58,6 +59,9 @@ fun ExploreScreen(modifier: Modifier = Modifier) {
 
         item {
             SustainabilityTipsSection(tips = sustainabilityTips)
+        }
+        item {
+            TreeOfTheMonthSection(tree = treeOfTheMonth)
         }
     }
 }
