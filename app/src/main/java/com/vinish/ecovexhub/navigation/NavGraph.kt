@@ -51,7 +51,9 @@ fun EcovexNavGraph(navController: NavHostController, modifier: Modifier = Modifi
         }
 
         composable(Routes.Profile.route) {
-            ProfileScreen()
+            ProfileScreen(
+                modifier = modifier
+            )
         }
 
         //register the path event/id
