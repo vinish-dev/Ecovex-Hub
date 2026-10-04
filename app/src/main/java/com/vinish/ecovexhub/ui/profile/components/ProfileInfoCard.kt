@@ -109,7 +109,7 @@ fun ProfileInfoCard(modifier: Modifier = Modifier) {
 //                    Spacer(Modifier.height(6.dp))
 
                     Text(
-                        text = "🌿  Club Member",
+                        text = "🌿 Member",
                         color = EcovexGreen,
                         style = MaterialTheme.typography.bodySmall,
                         fontWeight = FontWeight.W500,

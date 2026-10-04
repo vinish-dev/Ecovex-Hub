@@ -24,6 +24,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.vinish.ecovexhub.R
+import com.vinish.ecovexhub.theme.EcovexGreen
 import com.vinish.ecovexhub.theme.IconGreen
 
 @Preview(showSystemUi = true, showBackground = true)
@@ -43,7 +44,8 @@ fun UpdatesTopBar(
             //screen title
             Text(
                 text = "Posts",
-                style = MaterialTheme.typography.headlineSmall,
+                style = MaterialTheme.typography.headlineMedium,
+                color = EcovexGreen,
                 fontWeight = FontWeight.Bold
             )
 

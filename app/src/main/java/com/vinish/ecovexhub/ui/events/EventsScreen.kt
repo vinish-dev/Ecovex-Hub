@@ -75,8 +75,7 @@ fun EventsScreen(
             searchQuery = searchQuery,
             onSearchClick = { isSearching = true },
             onSearchQueryChange = { searchQuery = it },
-            onBackClick = { isSearching = false },
-            modifier = Modifier.background(Color.White)
+            onBackClick = { isSearching = false }
         )
 
         // filter bar

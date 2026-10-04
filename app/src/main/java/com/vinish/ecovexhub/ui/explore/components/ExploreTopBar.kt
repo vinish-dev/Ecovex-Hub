@@ -38,7 +38,7 @@ fun ExploreTopBar(
             )
 
             Text(
-                text = "Discover the green heart of our campus 🌿",
+                text = "Discover the green heart of our campus ",
                 style = MaterialTheme.typography.bodyMedium,
                 color = Color.Gray
             )
