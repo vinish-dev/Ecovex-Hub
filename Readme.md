@@ -6,26 +6,18 @@ Ecovex Hub brings campus events, club announcements, sustainability initiatives,
 
 ## Screenshots
 
-<!-- Replace the placeholders with your screenshots -->
+<p align="center">
+  <img src="screenshots/home.png" width="24%" alt="Home Screen" />
+  <img src="screenshots/events.png" width="24%" alt="Events Screen" />
+  <img src="screenshots/eventDetails.png" width="24%" alt="Event Details Screen" />
+  <img src="screenshots/leaderboard.png" width="24%" alt="Event Leaderboard" />
+</p>
 
 <p align="center">
-  <img src="screenshots/home.png" width="18%" alt="Home Screen" />
-  &nbsp;
-  <img src="screenshots/events.png" width="18%" alt="events happening" />
-  &nbsp;
-  <img src="screenshots/eventDetails.png" width="18%" alt="Add Deadline" />
-
-  <img src="screenshots/leaderboard.png" width="18%" alt="Add Deadline" />
-  <img src="screenshots/posts.png" width="18%" alt="Add Deadline" />
-
-  &nbsp;
-  <img src="screenshots/explore.png" width="18%" alt="Add Deadline Options" />
-  &nbsp;
-  &nbsp;
-  <img src="screenshots/gallery.png" width="18%" alt="Add Deadline Options" />
-  &nbsp;
-  <img src="screenshots/profile.png" width="18%" alt="Deadline Details" />
-
+  <img src="screenshots/gallery.png" width="24%" alt="Campus Gallery" />
+  <img src="screenshots/posts.png" width="24%" alt="Updates and Announcements" />
+  <img src="screenshots/explore.png" width="24%" alt="Explore Screen" />
+  <img src="screenshots/profile.png" width="24%" alt="Profile Screen" />
 </p>
 
 ## Features
