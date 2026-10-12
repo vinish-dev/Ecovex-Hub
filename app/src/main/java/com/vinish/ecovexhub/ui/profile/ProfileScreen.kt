@@ -11,6 +11,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.vinish.ecovexhub.ui.profile.components.ProfileInfoCard
 import com.vinish.ecovexhub.ui.profile.components.ProfileTopBar
+import com.vinish.ecovexhub.ui.profile.components.UserPreferenceCard
 
 @Composable
 fun ProfileScreen(modifier: Modifier = Modifier) {
@@ -26,6 +27,10 @@ fun ProfileScreen(modifier: Modifier = Modifier) {
         }
         item {
             ProfileInfoCard()
+        }
+
+        item {
+            UserPreferenceCard()
         }
     }
 }
